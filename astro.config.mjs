@@ -1,17 +1,19 @@
-import { defineConfig } from 'astro/config';
-import solidJs from '@astrojs/solid-js';
 import react from '@astrojs/react';
-import netlify from "@astrojs/netlify/functions";
+import solidJs from '@astrojs/solid-js';
+import { defineConfig } from 'astro/config';
 
-import mdx from "@astrojs/mdx";
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  site: 'https://astro-frontend-masters.netlify.app',
-  experimental: {
-    assets: true
-  },
-  integrations: [solidJs(), react(), mdx()],
-  adapter: netlify()
+	integrations: [
+		react({
+			include: ['**/react/*'],
+		}),
+		solidJs({
+			include: ['**/solid/*'],
+		}),
+	],
+	output: 'server',
+	adapter: vercel(),
 });
