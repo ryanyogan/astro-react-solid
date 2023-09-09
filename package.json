@@ -13,6 +13,7 @@
 		"@astrojs/netlify": "^3.0.1",
 		"@astrojs/react": "^3.0.2",
 		"@astrojs/solid-js": "^3.0.1",
+		"@astrojs/vercel": "^4.0.5",
 		"@nanostores/react": "^0.7.1",
 		"@nanostores/solid": "^0.4.2",
 		"astro": "^3.0.12",
