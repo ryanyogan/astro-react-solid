@@ -1,5 +1,5 @@
 ---
-import { AddToCart } from "../components/react/add-to-cart";
+import { AddToCart } from '../components/react/add-to-cart';
 function formatCurrency(amount: number) {
 	return new Intl.NumberFormat('en-US', {
 		style: 'currency',
@@ -19,7 +19,7 @@ type ShopItem = {
 };
 
 const result = await fetch(
-	'https://astro-frontend-masters-api.netlify.app/api/products'
+	'https://astro-frontend-masters-api.netlify.app/api/products',
 );
 
 if (!result.ok) {
