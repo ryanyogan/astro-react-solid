@@ -1,0 +1,34 @@
+---
+import ShopItems from '../components/shop-items.astro';
+import Layout from '../layouts/default.astro';
+---
+
+<Layout>
+	<div class="shop">
+		<h1>Show Sandwhich Kits</h1>
+
+		<noscript>
+			<p>Shopping carts like javascript, maybe we use HTMX, i dunno</p>
+		</noscript>
+
+		<div class="products">
+			<ShopItems />
+
+			<p>show carts</p>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.shop {
+		padding: 3rem 5%;
+	}
+
+	.products {
+		align-items: flex-start;
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: 1fr 260px;
+		position: relative;
+	}
+</style>
