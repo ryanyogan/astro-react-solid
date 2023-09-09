@@ -8,7 +8,5 @@ import netlify from '@astrojs/netlify/functions';
 export default defineConfig({
 	integrations: [react(), solidJs()],
 	output: 'server',
-	adapter: netlify({
-		edgeMiddleware: true,
-	}),
+	adapter: netlify(),
 });
