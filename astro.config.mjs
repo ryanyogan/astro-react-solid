@@ -13,4 +13,5 @@ export default defineConfig({
 			include: ['**/solid/*'],
 		}),
 	],
+	output: 'hybrid',
 });
